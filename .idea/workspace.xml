@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bdf4f23-8819-4e29-ba54-b8fa03a13cdf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0002_auto_20160415_0106.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/forms.py" afterPath="$PROJECT_DIR$/blog/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/urls.py" afterPath="$PROJECT_DIR$/blog/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myblogshare/settings.py" afterPath="$PROJECT_DIR$/myblogshare/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/add_article.html" afterPath="$PROJECT_DIR$/templates/blog/add_article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/base.html" afterPath="$PROJECT_DIR$/templates/blog/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/register.html" afterPath="$PROJECT_DIR$/templates/blog/register.html" />
     </list>
     <ignored path="myblogshare.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,7 +106,7 @@
       <file leaf-file-name="populate.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/populate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-927">
+            <state relative-caret-position="-708">
               <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding />
             </state>
@@ -159,6 +147,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -192,8 +183,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="140" />
-    <option name="y" value="64" />
+    <option name="x" value="184" />
+    <option name="y" value="33" />
     <option name="width" value="1091" />
     <option name="height" value="777" />
   </component>
@@ -666,19 +657,28 @@
       <option name="presentableId" value="Default" />
       <updated>1460362769765</updated>
     </task>
+    <task id="LOCAL-00001" summary="premier fix log">
+      <created>1460813718337</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1460813718337</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="140" y="64" width="1091" height="777" extended-state="0" />
-    <editor active="true" />
+    <frame x="184" y="33" width="1091" height="777" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16396569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983795" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31970802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31970802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24976167" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -694,6 +694,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="premier fix log" />
+    <option name="LAST_COMMIT_MESSAGE" value="premier fix log" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1062,7 +1066,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/populate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-927">
+        <state relative-caret-position="-708">
           <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding />
         </state>
