@@ -43,7 +43,7 @@ class Article(models.Model):
     content = models.TextField()
     favor_count = models.IntegerField(default=0)
     reply_count = models.IntegerField(default=0)
-    user = models.ForeignKey('User')
+    user = models.ForeignKey('UserProfile')
     article_type = models.ForeignKey('ArticleType')
     create_date = models.DateTimeField(default=datetime.now())
     revised_date = models.DateTimeField(auto_now=True, default=datetime.now())
@@ -54,7 +54,7 @@ class Article(models.Model):
 
 class Reply(models.Model):
     content = models.TextField()
-    user = models.ForeignKey('User')
+    user = models.ForeignKey('UserProfile')
     news = models.ForeignKey('Article')
     create_date = models.DateTimeField(auto_now_add=True)
 
@@ -64,7 +64,7 @@ class Reply(models.Model):
 
 class Chat(models.Model):
     content = models.TextField()
-    user = models.ForeignKey('User')
+    user = models.ForeignKey('UserProfile')
     create_date = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):
@@ -73,7 +73,7 @@ class Chat(models.Model):
 
 class MessageBord(models.Model):
     content = models.TextField()
-    user = models.ForeignKey('User')
+    user = models.ForeignKey('UserProfile')
     create_date = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):

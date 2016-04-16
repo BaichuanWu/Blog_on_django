@@ -9,8 +9,9 @@ author:wubaichuan
 from django.conf.urls import patterns, url
 
 urlpatterns = patterns('blog',
-                       url(r'^index/$', 'views.index', name='index'),
-                       url(r'^login/$', 'views.login', name='login'),
+                       url(r'^$', 'views.index', name='index'),
+                       url(r'^login/$', 'views.user_login', name='user_login'),
+                       url(r'^logout/$', 'views.user_logout', name='user_logout'),
                        url(r'^about/$', 'views.about', name='about'),
                        url(r'^register/$', 'views.register', name='register'),
                        url(r'^atype/(?P<type_slug>[\w\-]+)/$', 'views.article_type', name='article_type'),

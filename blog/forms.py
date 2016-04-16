@@ -5,7 +5,7 @@ author:wubaichuan
 
 """
 from django import forms
-from blog.models import Article, UserInfo
+from blog.models import Article, User, UserProfile
 
 
 class ArticleForm(forms.ModelForm):
@@ -18,5 +18,20 @@ class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
         fields = ('title', 'article_type_id', 'summary', 'content')
+
+
+class UserForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
+
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'password')
+
+
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ('website', 'picture')
+
 
 

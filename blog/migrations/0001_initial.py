@@ -3,11 +3,13 @@ from __future__ import unicode_literals
 
 from django.db import models, migrations
 import datetime
+from django.conf import settings
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
+        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
@@ -20,9 +22,8 @@ class Migration(migrations.Migration):
                 ('content', models.TextField()),
                 ('favor_count', models.IntegerField(default=0)),
                 ('reply_count', models.IntegerField(default=0)),
-                ('create_date', models.DateTimeField(default=datetime.datetime(2016, 4, 15, 0, 43, 25, 456390))),
-                ('revised_date', models.DateTimeField(default=datetime.datetime(2016, 4, 15, 0, 43, 25, 456417), auto_now=True)),
-                ('slug', models.SlugField(unique=True)),
+                ('create_date', models.DateTimeField(default=datetime.datetime(2016, 4, 16, 21, 30, 32, 789743))),
+                ('revised_date', models.DateTimeField(default=datetime.datetime(2016, 4, 16, 21, 30, 32, 789774), auto_now=True)),
             ],
             options={
             },
@@ -74,51 +75,33 @@ class Migration(migrations.Migration):
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='UserInfo',
+            name='UserProfile',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('username', models.CharField(unique=True, max_length=50)),
-                ('password', models.CharField(max_length=256)),
-                ('email', models.EmailField(unique=True, max_length=75)),
-                ('create_date', models.DateTimeField(default=datetime.datetime(2016, 4, 15, 0, 43, 25, 454887))),
-                ('last_date', models.DateTimeField(default=b'2016-4-10')),
+                ('website', models.URLField(blank=True)),
+                ('picture', models.ImageField(upload_to=b'profile_images', blank=True)),
+                ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
             ],
             options={
             },
             bases=(models.Model,),
-        ),
-        migrations.CreateModel(
-            name='UserType',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('display', models.CharField(unique=True, max_length=50)),
-            ],
-            options={
-            },
-            bases=(models.Model,),
-        ),
-        migrations.AddField(
-            model_name='userinfo',
-            name='user_type',
-            field=models.ForeignKey(to='blog.UserType'),
-            preserve_default=True,
         ),
         migrations.AddField(
             model_name='reply',
             name='user',
-            field=models.ForeignKey(to='blog.UserInfo'),
+            field=models.ForeignKey(to='blog.UserProfile'),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='messagebord',
             name='user',
-            field=models.ForeignKey(to='blog.UserInfo'),
+            field=models.ForeignKey(to='blog.UserProfile'),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='chat',
             name='user',
-            field=models.ForeignKey(to='blog.UserInfo'),
+            field=models.ForeignKey(to='blog.UserProfile'),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -130,7 +113,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='article',
             name='user',
-            field=models.ForeignKey(to='blog.UserInfo'),
+            field=models.ForeignKey(to='blog.UserProfile'),
             preserve_default=True,
         ),
     ]

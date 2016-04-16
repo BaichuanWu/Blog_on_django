@@ -101,3 +101,4 @@ TEMPLATE_DIRS = (
 STATICFILES_DIRS = (
     STATIC_PATH,
 )
+LOGIN_URL = '/blog/login/'
