@@ -1,0 +1,39 @@
+body{
+    background: url("../image/bodyBackground.jpg");
+}
+.theme-showcase{
+    display: block;
+    margin-top: 80px;
+}
+.border-rad{
+    border-radius: 6px;
+    background-color: white;
+}
+.margin-buttom{
+    margin-bottom: 20px;
+}
+.margin-left{
+    margin-left: 10%;
+
+}
+a.none{
+    text-decoration-line: none;
+}
+a.none:visited{
+    color: white;
+    text-decoration: none;
+}
+a.none:hover{
+    color: white;
+    text-decoration: none;
+}
+.inline{
+    display: inline-block;
+}
+.right-float{
+    float: right;
+}
+.date-grey{
+    font-size: 10px;
+    color: gray;
+}

@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+{% block body %}
+    <div class="container theme-showcase" role="main">
+        <div class="row">
+            <div class="border-rad col-md-offset-2 col-md-8">
+                <h2 class="margin-buttom inline">欢迎注册</h2>
+                <hr/>
+                <div class="input-group col-md-offset-1 col-md-6">
+                    <form action="/blog/register/" method="POST" class="margin-buttom">
+                        {% csrf_token %}
+
+                        <div class="input-group margin-buttom">
+                            <span class="input-group-addon" id="basic-addon1">&nbsp;用户名:&nbsp;&nbsp;</span>
+                            <input type="text" class="form-control" name="username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group margin-buttom">
+                            <span class="input-group-addon" id="basic-addon1">&nbsp;&nbsp;&nbsp;邮箱:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <input type="text" class="form-control" name="email" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group margin-buttom">
+                            <span class="input-group-addon" id="basic-addon2">&nbsp;&nbsp;&nbsp;密码:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <input type="password" class="form-control" name="password" aria-describedby="basic-addon2">
+                        </div>
+                        <div class="input-group margin-buttom">
+                            <span class="input-group-addon" id="basic-addon2">重复密码:</span>
+                            <input type="password" class="form-control" name="password-2" aria-describedby="basic-addon2">
+                        </div>
+                        <div>
+                            <button value="submit" type="submit" class="btn btn-primary">&nbsp;&nbsp;确认&nbsp;&nbsp;</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <hr/>
+    </div>
+
+
+    </div>
+    </div>
+{% endblock %}
