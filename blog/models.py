@@ -41,9 +41,8 @@ class Article(models.Model):
     title = models.CharField(max_length=30, unique=True)
     summary = models.CharField(max_length=256)
     content = models.TextField()
-    favor_count = models.IntegerField(default=0)
     reply_count = models.IntegerField(default=0)
-    user = models.ForeignKey('UserProfile')
+    author = models.ForeignKey('UserProfile')
     article_type = models.ForeignKey('ArticleType')
     create_date = models.DateTimeField(default=datetime.now())
     revised_date = models.DateTimeField(auto_now=True, default=datetime.now())
@@ -55,8 +54,8 @@ class Article(models.Model):
 class Reply(models.Model):
     content = models.TextField()
     user = models.ForeignKey('UserProfile')
-    news = models.ForeignKey('Article')
-    create_date = models.DateTimeField(auto_now_add=True)
+    article = models.ForeignKey('Article')
+    create_date = models.DateTimeField(default=datetime.now())
 
     def __unicode__(self):
         return self.content

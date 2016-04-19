@@ -1,9 +1,16 @@
 {% extends 'blog/base.html' %}
+{% load staticfiles %}
 {% block body %}
     <div class="container theme-showcase" role="main">
         <div class="row"></div>
         <div class="border-rad col-md-8">
             <div>
+                {% if registered %}
+                    <div class="alert alert-success alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <strong>注册成功</strong>
+                    </div>
+                {% endif %}
                 <h2>最新文章</h2>
                 <hr>
                 {% if articles %}
@@ -16,20 +23,45 @@
                         <h4><a href="/blog/article/{{ article.id }}/">{{ article.title }}</a></h4>
 
                         <p>{{ article.summary }}</p>
-                        <ul class="nav nav-pills" role="tablist">
-                            <li role="presentation"><a href="#">
-                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                                <span class="badge">{{ article.favor_count }}</span></a></li>
-                            <li role="presentation"><a href="#">回复<span class="badge">{{ article.reply_count }}</span></a></li>
-                            <span class="inline right-float date-grey">{{ article.revised_date |date:'Y年m月j日 H:i'}}</span>
-                        </ul>
-                        <hr/>
+                        {% include "blog/_reply.html" %}
                     {% endfor %}
                 {% endif %}
+                <nav>
+                    <ul class="pagination">
+                        <li {% if not previous_page %}class="disabled" {% endif %}>
+                            <a href="/blog/{{ previous_page }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="/blog/1">首页</a></li>
+                        <li class="disabled"><a href="#">...</a></li>
+                        {% for page in page_list %}
+                            {% if page == current_page %}
+                                <li class="active"><a href="/blog/{{ page }}">{{ page }}</a></li>
+                            {% else %}
+                                <li><a href="/blog/{{ page }}">{{ page }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        <li class="disabled"><a href="#">...</a></li>
+                        <li><a href="/blog/{{ end_page }}">尾页</a></li>
+                        <li {% if not next_page %}class="disabled" {% endif %}>
+                            <a href="/blog/{{ next_page }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <div class="border-rad col-md-offset-1 col-md-3">
-            hahahah
+            <h5>最近注册</h5>
+            <hr/>
+            {% for user in user_list %}
+                <div class="registered">
+                    <a href="/blog/profile/{{ user.id }}"><img src="{% static 'image/default1.jpg' %}" alt="..." class="img-rounded img-normal"></a>
+                    <p>{{ user.username }}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

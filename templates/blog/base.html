@@ -42,7 +42,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/blog/">主页</a></li>
+                    <li><a href="/blog">主页</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                            role="button" aria-haspopup="true" aria-expanded="false">
@@ -64,8 +64,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
-                        <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                        </a></li><span class="sr-only">(current)</span>
+                        <li><img src="{% static 'image/default1.jpg' %}" alt="..." class="img-circle img-small"></li><span class="sr-only">(current)</span>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                                role="button" aria-haspopup="true" aria-expanded="false">
@@ -73,7 +72,8 @@
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-header">你好</li>
-                                <li><a href="/blog/add-article/">写点什么</a></li>
+                                <li><a href="/blog/profile/{{ user.id }}">管理文章</a></li>
+                                <li><a href="/blog/add_article/">写点什么</a></li>
                                 <li><a href="/blog/logout/">登出</a></li>
                             </ul>
                         </li>
@@ -91,8 +91,11 @@
 {% block body %}
 {% endblock %}
 
-<script src="{% static "js/jquery.min.js" %}"></script>
+<script src="{% static "js/jquery-1.12.3.js" %}"></script>
 <script src="{% static "js/bootstrap.js" %}"></script>
+<script src="{% static "js/jquery_cookie.js" %}"></script>
+<script src="{% static "js/csrf.js" %}"></script>  <!--  通过csrf    -->
+<script src="{% static "js/common.js" %}"></script>
 
 </body>
 </html>

@@ -1,0 +1,63 @@
+{% extends 'blog/base.html' %}
+{% block body %}
+    <div class="container theme-showcase" role="main">
+        {% if error %}
+            <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <strong>{{ error }}</strong>
+
+            </div>
+        {% endif %}
+        <div class="row">
+            <div class="border-rad col-md-offset-2 col-md-8">
+                <h2 class="margin-buttom inline">欢迎注册</h2>
+                <p>*必填</p>
+                <hr/>
+                <div class="input-group col-md-offset-1 col-md-10">
+                    <form action="/blog/register/" method="POST" class="margin-buttom" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="input-group margin-buttom">
+                            <span class="input-group-addon" id="username1">&nbsp;*用户名:&nbsp;&nbsp;</span>
+                            <input type="text" class="form-control" name="username"
+                                   placeholder="输入3~12字符用户名"
+                                   aria-describedby="username1">
+                        </div>
+                        <div class="input-group margin-buttom">
+                            <span class="input-group-addon" id="mail1">&nbsp;&nbsp;&nbsp;*邮箱:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <input type="email" class="form-control" name="email" aria-describedby="mail1">
+                        </div>
+                        <div class="input-group margin-buttom">
+                            <span class="input-group-addon" id="password1">&nbsp;&nbsp;&nbsp;*密码:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <input type="password" class="form-control" name="password" aria-describedby="password1">
+                        </div>
+                        <div class="input-group margin-buttom">
+                            <span class="input-group-addon" id="password2">*重复密码:</span>
+                            <input type="password" class="form-control" name="password-2" aria-describedby="password2">
+                        </div>
+                        <div class="input-group margin-buttom">
+                            <span class="input-group-addon" id="web1">&nbsp;个人网站:</span>
+                            <input type="url" class="form-control" name="website" aria-describedby="web1">
+                        </div>
+                        <div class="input-group margin-buttom">
+                            <span>上传头像(小于1MB):</span>
+                            <input type="file" name="picture">
+                        </div>
+                        <div>
+                            <button value="submit" type="submit" class="btn btn-primary">&nbsp;&nbsp;确认&nbsp;&nbsp;</button>
+                        </div>
+                        {#                        {{ user_form.as_p }}#}
+                        {#                        {{ profile_form.as_p }}#}
+                        {#                        <button value="submit" type="submit" class="btn btn-primary">&nbsp;&nbsp;确认&nbsp;&nbsp;</button>#}
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <hr/>
+    </div>
+
+
+    </div>
+    </div>
+{% endblock %}

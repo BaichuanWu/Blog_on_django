@@ -22,8 +22,8 @@ class Migration(migrations.Migration):
                 ('content', models.TextField()),
                 ('favor_count', models.IntegerField(default=0)),
                 ('reply_count', models.IntegerField(default=0)),
-                ('create_date', models.DateTimeField(default=datetime.datetime(2016, 4, 16, 21, 30, 32, 789743))),
-                ('revised_date', models.DateTimeField(default=datetime.datetime(2016, 4, 16, 21, 30, 32, 789774), auto_now=True)),
+                ('create_date', models.DateTimeField(default=datetime.datetime(2016, 4, 18, 9, 51, 18, 580436))),
+                ('revised_date', models.DateTimeField(default=datetime.datetime(2016, 4, 18, 9, 51, 18, 580464), auto_now=True)),
             ],
             options={
             },
@@ -46,6 +46,15 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('content', models.TextField()),
                 ('create_date', models.DateTimeField(auto_now_add=True)),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='Favor',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
             ],
             options={
             },
@@ -99,6 +108,18 @@ class Migration(migrations.Migration):
             preserve_default=True,
         ),
         migrations.AddField(
+            model_name='favor',
+            name='follower',
+            field=models.ForeignKey(to='blog.UserProfile'),
+            preserve_default=True,
+        ),
+        migrations.AddField(
+            model_name='favor',
+            name='target',
+            field=models.ForeignKey(to='blog.Article'),
+            preserve_default=True,
+        ),
+        migrations.AddField(
             model_name='chat',
             name='user',
             field=models.ForeignKey(to='blog.UserProfile'),
@@ -112,7 +133,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='article',
-            name='user',
+            name='author',
             field=models.ForeignKey(to='blog.UserProfile'),
             preserve_default=True,
         ),
