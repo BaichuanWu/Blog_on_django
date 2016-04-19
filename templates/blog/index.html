@@ -1,7 +1,13 @@
 {% extends 'blog/base.html' %}
+{% load staticfiles %}
 {% block body %}
     <div class="container theme-showcase" role="main">
-        <div class="row"></div>
+        {% if notice %}
+            <div class="alert alert-success alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <strong>{{ notice }}</strong>
+            </div>
+        {% endif %}
         <div class="border-rad col-md-8">
             <div>
                 <h2>最新文章</h2>
@@ -16,20 +22,15 @@
                         <h4><a href="/blog/article/{{ article.id }}/">{{ article.title }}</a></h4>
 
                         <p>{{ article.summary }}</p>
-                        <ul class="nav nav-pills" role="tablist">
-                            <li role="presentation"><a href="#">
-                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                                <span class="badge">{{ article.favor_count }}</span></a></li>
-                            <li role="presentation"><a href="#">回复<span class="badge">{{ article.reply_count }}</span></a></li>
-                            <span class="inline right-float date-grey">{{ article.revised_date |date:'Y年m月j日 H:i'}}</span>
-                        </ul>
-                        <hr/>
+                        {% include "blog/plug_in/_reply.html" %}
                     {% endfor %}
                 {% endif %}
+                <nav>
+                    {% include 'blog/plug_in/_page.html' %}
+                </nav>
             </div>
         </div>
-        <div class="border-rad col-md-offset-1 col-md-3">
-            hahahah
-        </div>
+        {% load blog_extra %}
+        {% new_reg %}
     </div>
 {% endblock %}

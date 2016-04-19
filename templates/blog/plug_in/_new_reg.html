@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<div class="border-rad col-md-offset-1 col-md-3">
+    <h5>最近登录</h5>
+    <hr/>
+    {% for user in user_list %}
+        <div class="registered">
+            <a href="/blog/profile/{{ user.id }}">
+                <button type="button" class="none" data-toggle="tooltip" data-placement="top" title="{{ user.last_login|date:'Y年m月j日 H:i' }}">
+                    <img src="{% static 'image/default1.jpg' %}" alt="..." class="img-rounded img-normal">
+                </button>
+            </a>
+            <div class="profile">
+                <p>{{ user.username }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>

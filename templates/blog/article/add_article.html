@@ -1,0 +1,43 @@
+{% extends 'blog/base.html' %}
+{% block body %}
+    <div class="container theme-showcase" role="main">
+        <div class="row">
+            {% if error %}
+                <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <strong>{{ error }}</strong>
+                </div>
+            {% endif %}
+            <div class="border-rad col-md-offset-2 col-md-8">
+                <h2 class="margin-buttom inline">写点什么</h2>
+                <hr/>
+                <form id="article_form" method="post" action="/blog/add_article/">
+                    {% csrf_token %}
+                    {#                        {{ form.as_p }}#}
+                    <div class="input-group margin-buttom">
+                        <span class="input-group-addon" id="title">&nbsp;标题:&nbsp;&nbsp;</span>
+                        <input type="text" class="form-control" name="title" aria-describedby="title" value="{{ title }}">
+                    </div>
+                    <div class="input-group margin-buttom">
+                        <span class="input-group-addon" id="summary">&nbsp;简介:&nbsp;&nbsp;</span>
+                        <input type="text" class="form-control" name="summary" aria-describedby="summary" value="{{ summary }}">
+                    </div>
+                    <div class="input-group margin-buttom">
+                        <lable>选择文章类型</lable>
+                        <select class="form-control float-left" name="article_type_id">
+                            <option value="1">python</option>
+                            <option value="2">javascript</option>
+                            <option value="3">away</option>
+                            <option value="4">home</option>
+                        </select>
+                    </div>
+                    <lable>内容</lable>
+                    <textarea class="form-control" rows="10" name="content">{{ content }}</textarea>
+                    <div>
+                        <button value="submit" type="submit" class="btn btn-primary">&nbsp;&nbsp;确认&nbsp;&nbsp;</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

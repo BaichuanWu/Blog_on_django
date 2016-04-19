@@ -1,0 +1,33 @@
+{% extends 'blog/base.html' %}
+{% block body %}
+    <div class="container theme-showcase" role="main">
+        <div class="row"></div>
+        <div class="border-rad col-md-8">
+            <div>
+                <h2>{{ author.username }}的主页</h2>
+                <hr>
+                {% if articles %}
+                    {% for article in articles %}
+                        {% if author.id == user.id  %}
+                        <span class="label label-danger inline right-float margin-left">
+                            <a href="/blog/delete_article/{{ article.id }}/" class="none white">
+                                删除
+                            </a>
+                        </span>
+                        <span class="label label-warning inline right-float margin-left">
+                            <a href="/blog/edit_article/{{ article.id }}/" class="none white">
+                                修改
+                            </a>
+                        </span>
+                        {% endif %}
+                        <h4><a href="/blog/article/{{ article.id }}/">{{ article.title }}</a></h4>
+                        <p>{{ article.content }}</p>
+                        {% include "blog/plug_in/_reply.html" %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        {% load blog_extra %}
+        {% new_reg %}
+    </div>
+{% endblock %}
