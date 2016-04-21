@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bdf4f23-8819-4e29-ba54-b8fa03a13cdf" name="Default" comment="premier fix log">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog/tools/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog/tools/email_tool.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/auth/email_psw.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/auth/reset_psw.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/message_bord.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/plug_in/_new_reg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/plug_in/_page.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blog/json_type.py" afterPath="$PROJECT_DIR$/blog/tools/json_type.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blog/page_tool.py" afterPath="$PROJECT_DIR$/blog/tools/page_tool.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blog/verify_picture.py" afterPath="$PROJECT_DIR$/blog/tools/verify_picture.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/blog/_reply.html" afterPath="$PROJECT_DIR$/templates/blog/plug_in/_reply.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/blog/auth/forgot_password.html" afterPath="$PROJECT_DIR$/templates/blog/auth/forgot_psw.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/admin.py" afterPath="$PROJECT_DIR$/blog/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/forms.py" afterPath="$PROJECT_DIR$/blog/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templatetags/blog_extra.py" afterPath="$PROJECT_DIR$/blog/templatetags/blog_extra.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/tests.py" afterPath="$PROJECT_DIR$/blog/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/urls.py" afterPath="$PROJECT_DIR$/blog/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
+    <list default="true" id="0bdf4f23-8819-4e29-ba54-b8fa03a13cdf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myblogshare/settings.py" afterPath="$PROJECT_DIR$/myblogshare/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/common.css" afterPath="$PROJECT_DIR$/static/css/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/common.js" afterPath="$PROJECT_DIR$/static/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/article/add_article.html" afterPath="$PROJECT_DIR$/templates/blog/article/add_article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/article/article.html" afterPath="$PROJECT_DIR$/templates/blog/article/article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/article/atype.html" afterPath="$PROJECT_DIR$/templates/blog/article/atype.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/article/profile.html" afterPath="$PROJECT_DIR$/templates/blog/article/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/auth/login.html" afterPath="$PROJECT_DIR$/templates/blog/auth/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/auth/register.html" afterPath="$PROJECT_DIR$/templates/blog/auth/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/base.html" afterPath="$PROJECT_DIR$/templates/blog/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/index.html" afterPath="$PROJECT_DIR$/templates/blog/index.html" />
     </list>
     <ignored path="myblogshare.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,11 +75,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/blog/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-528">
               <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/myblogshare/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -184,7 +164,6 @@
         <option value="$PROJECT_DIR$/templates/blog/auth/reset_psw.html" />
         <option value="$PROJECT_DIR$/static/js/common.js" />
         <option value="$PROJECT_DIR$/templates/blog/auth/register.html" />
-        <option value="$PROJECT_DIR$/myblogshare/settings.py" />
         <option value="$PROJECT_DIR$/templates/blog/auth/login.html" />
         <option value="$PROJECT_DIR$/templates/blog/auth/forgot_psd.html" />
         <option value="$PROJECT_DIR$/templates/blog/auth/email_psw.html" />
@@ -197,6 +176,7 @@
         <option value="$PROJECT_DIR$/blog/models.py" />
         <option value="$PROJECT_DIR$/blog/urls.py" />
         <option value="$PROJECT_DIR$/templates/blog/base.html" />
+        <option value="$PROJECT_DIR$/myblogshare/settings.py" />
       </list>
     </option>
   </component>
@@ -206,8 +186,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="103" />
-    <option name="y" value="66" />
+    <option name="x" value="102" />
+    <option name="y" value="67" />
     <option name="width" value="1096" />
     <option name="height" value="667" />
   </component>
@@ -424,6 +404,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myblogshare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myblogshare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myblogshare" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -861,7 +855,14 @@
       <option name="project" value="LOCAL" />
       <updated>1460813834323</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="message board left">
+      <created>1461245348313</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1461245348313</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -873,22 +874,22 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="103" y="66" width="1096" height="667" extended-state="0" />
-    <editor active="false" />
+    <frame x="102" y="67" width="1096" height="667" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28178367" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983795" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10956522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10956522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24976167" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990307" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -910,7 +911,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="premier fix log" />
-    <option name="LAST_COMMIT_MESSAGE" value="premier fix log" />
+    <MESSAGE value="message board left" />
+    <option name="LAST_COMMIT_MESSAGE" value="message board left" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1125,14 +1127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myblogshare/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="108" column="38" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myblogshare/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1294,6 +1288,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-528">
           <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblogshare/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding />
         </state>
       </provider>
