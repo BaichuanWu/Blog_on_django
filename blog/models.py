@@ -55,7 +55,7 @@ class Chat(models.Model):
         return self.content
 
 
-class MessageBord(models.Model):
+class MessageBoard(models.Model):
     content = models.TextField()
     user = models.ForeignKey('UserProfile')
     create_date = models.DateTimeField(default=datetime.now())

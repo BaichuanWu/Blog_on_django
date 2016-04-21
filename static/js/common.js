@@ -11,9 +11,10 @@ function reply(content, id) {
             success: function (calback) {
                 console.log(calback);
                 $.each(calback, function (k,v) {
-                    var temp = "<lable><h5 class='inline'>"+v.user__user__username+":</h5>&nbsp;&nbsp;"+
-                        v.content+"</lable><span class='inline right-float date-grey'>"+
-                        v.create_date+"</span><hr class='reply'/>";
+                    var temp = "<lable><h5 class='inline'>"+v.user__user__username+
+                        ":</h5>&nbsp;&nbsp;&nbsp;</lable><span class='inline right-float date-grey'>"+
+                        v.create_date+"</span>"+
+                        v.content+"<hr class='reply'/>";
                     $(content).parent().parent().next().find('.rep-node').append(temp);
 
                 });
@@ -37,14 +38,36 @@ function addReply(content, id) {
             type:'POST',
             success:function (calback) {
                 // console.log(calback);
-                var temp = "<lable><h5 class='inline'>"+calback.user+":</h5>&nbsp;&nbsp;"+
-                    calback.content+"</lable><span class='inline right-float date-grey'>"+
-                    calback.create_date+"</span><hr class='reply'/>";
+                var temp = "<lable><h5 class='inline'>"+calback.user+
+                    ":</h5>&nbsp;&nbsp;</lable><span class='inline right-float date-grey'>"+
+                    calback.create_date+"</span>"+calback.content+"<hr class='reply'/>";
                 $(content).parent().prev().append(temp);
                 $(content).prev().val('');
-                console.log(calback.count);
-                console.log($(content).parent().parent().prev().find('span.fav')[0].innerHTML);
                 $(content).parent().parent().prev().find('span.fav')[0].innerHTML=calback.count
+            }
+        })
+    }
+}
+
+function addMessage(content, id) {
+    var reply_content = $(content).prev().val();
+    if (!reply_content){
+        console.log($(content).next());
+        $(content).next().removeClass('hide');
+    }
+    else {
+        $.ajax({
+            url:'/blog/add_message/',
+            data:{data:reply_content},
+            type:'POST',
+            success:function (calback) {
+                var temp = "<div class='message'><a href='/blog/profile/"+calback.id+"'><h4 class='inline'>"
+                    +calback.user+":</h4></a>&nbsp;&nbsp;&nbsp;"+
+                    "</lable><span class='inline right-float date-grey'>"+
+                    calback.create_date+"</span>"+
+                    calback.content+"<hr class='reply'/></div>";
+                $(content).parent().prev().append(temp);
+                $(content).prev().val('');
             }
         })
     }

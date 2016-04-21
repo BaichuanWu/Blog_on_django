@@ -90,3 +90,11 @@ button.none{
 p.bar{
     margin-top: -10px;
 }
+div.message{
+    position: relative;
+}
+span.bottom{
+    position: absolute;
+    bottom: 10px;
+    right: 3px;
+}

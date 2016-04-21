@@ -4,19 +4,19 @@
             <span aria-hidden="true">&laquo;</span>
         </a>
     </li>
-    <li><a href="/blog/1">首页</a></li>
+    <li><a href="/blog/{{ in_url }}1">首页</a></li>
     <li class="disabled"><a href="#">...</a></li>
     {% for page in page_list %}
         {% if page == current_page %}
-            <li class="active"><a href="/blog/{{ page }}">{{ page }}</a></li>
+            <li class="active"><a href="/blog/{{ in_url }}{{ page }}">{{ page }}</a></li>
         {% else %}
-            <li><a href="/blog/{{ page }}">{{ page }}</a></li>
+            <li><a href="/blog/{{ in_url }}{{ page }}">{{ page }}</a></li>
         {% endif %}
     {% endfor %}
     <li class="disabled"><a href="#">...</a></li>
-    <li><a href="/blog/{{ end_page }}">尾页</a></li>
+    <li><a href="/blog/{{ in_url }}{{ end_page }}">尾页</a></li>
     <li {% if not next_page %}class="disabled" {% endif %}>
-        <a href="/blog/{{ next_page }}" aria-label="Next">
+        <a href="/blog/{{ in_url }}{{ next_page }}" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
         </a>
     </li>

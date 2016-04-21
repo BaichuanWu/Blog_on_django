@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% block body %}
+    <div class="container theme-showcase" role="main">
+        <div class="border-rad col-md-8 col-md-offset-2">
+            <h2>留言板</h2>
+            <hr class="reply" />
+            {% include 'blog/plug_in/_page.html' %}
+            <div>
+                {% for message in messages %}
+                    <div class="message">
+                        <a href="/blog/profile/{{ message.user.id }}">
+                            <h4 class='inline'>{{ message.user.user.username }}:
+                            </h4>
+                        </a>
+                    <span class='inline right-float date-grey'>
+                        {{ message.create_date|date:'Y-m-j H:i:s' }}</span>
+                        &nbsp;&nbsp;{{ message.content }}
+                        <hr class="reply"/></div>
+                {% endfor %}
+            </div>
+            {% if end_page == current_page %}
+            <div class="add-node">
+                <textarea class="form-control" rows="2" name="content"></textarea>
+                {% if user.is_authenticated %}
+                    <button type="button" class="btn btn-default btn-sm" onclick="addMessage(this);">提交</button>
+                {% else %}
+                    <a href="/blog/login/" class="none"><button type="button" class="btn btn-default btn-sm">提交</button></a>
+                {% endif %}
+                <span class="hide">回复不能为空!</span>
+            </div>
+            {% endif %}
+            <hr/>
+
+        </div>
+    </div>
+{% endblock %}

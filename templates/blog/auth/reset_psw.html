@@ -27,11 +27,11 @@
                         <div class="input-group margin-buttom">
                             <span class="input-group-addon" id="password2">*重复密码:</span>
                             <input type="password" class="form-control" name="password-2" aria-describedby="password2"
-                                   id="psw2" onblur="validatePsw()">
+                                   id="psw2" onkeyup="validatePsw()">
                         </div>
                         <div id="conf"></div>
                         <div>
-                            <button value="submit" type="submit" class="btn btn-primary">&nbsp;&nbsp;确认&nbsp;&nbsp;</button>
+                            <button value="submit" disabled="disabled" type="submit" class="btn btn-primary" id="submit">&nbsp;&nbsp;确认&nbsp;&nbsp;</button>
                         </div>
                     </form>
                 </div>
