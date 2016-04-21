@@ -53,7 +53,7 @@ ul,li{
     margin-top: 10px;
 }
 .img-normal{
-    margin-top: -10px;
+    margin-left: auto;
     height: 45px;
     width: 45px;
     display: inline-block;
@@ -61,9 +61,13 @@ ul,li{
 div.profile{
     width: 45px;
 }
+div.profile>p{
+    font-size: smaller;
+}
 .registered{
     width: 50px;
     height: 60px;
+    display: inline-block;
     float: left;
     margin: 8px;
 }
