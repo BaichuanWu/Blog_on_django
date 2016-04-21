@@ -22,6 +22,34 @@ DEFAULT_CHARSET = 'utf-8'
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+import sae.const
+from os import environ
+
+debug = not environ.get("APP_NAME", "")
+if debug:
+    MYSQL_DB = 'mysite'
+    MYSQL_USER = 'root'
+    MYSQL_PASS = ''
+    MYSQL_HOST_M = '127.0.0.1'
+    MYSQL_HOST_S = '127.0.0.1'
+    MYSQL_PORT = '3306'
+else:
+    # SAE
+    import sae.const
+
+    MYSQL_DB = sae.const.MYSQL_DB
+    MYSQL_USER = sae.const.MYSQL_USER
+    MYSQL_PASS = sae.const.MYSQL_PASS
+    MYSQL_HOST_M = sae.const.MYSQL_HOST
+    MYSQL_HOST_S = sae.const.MYSQL_HOST_S
+    MYSQL_PORT = sae.const.MYSQL_PORT
+
+
+
+
+
+
+
 SECRET_KEY = '5-kgk!gihr-hnmr3(*%=5g+4675usi%5=+6t3l)rg#bc2)y4%o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -62,12 +90,13 @@ WSGI_APPLICATION = 'myblogshare.wsgi.application'
 
 DATABASES = {
     'default': {
+
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myblog',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': '',
-        'PORT': '',
+        'NAME': MYSQL_DB,
+        'USER': MYSQL_USER,
+        'PASSWORD': MYSQL_PASS,
+        'HOST': MYSQL_HOST_M,
+        'PORT': MYSQL_PORT,
 
     }
 }
