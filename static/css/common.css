@@ -60,6 +60,7 @@ ul,li{
 }
 div.profile{
     width: 45px;
+    text-align: center;
 }
 div.profile>p{
     font-size: smaller;

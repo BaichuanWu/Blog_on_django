@@ -4,16 +4,17 @@
     <hr/>
     {% for user in user_list %}
         <div class="col-md-4">
-            <a href="/blog/profile/{{ user.id }}">
-                <button type="button" class="none" data-toggle="tooltip" data-placement="top" title="{{ user.last_login|date:'Y年m月j日 H:i' }}">
-                    <img src="{% static 'image/default1.jpg' %}" alt="..." class="img-rounded img-normal">
-                </button>
-            </a>
             <div class="profile">
-                <p>{{ user.username }}</p>
+                <a href="/blog/profile/{{ user.id }}">
+                    <button type="button" class="none" data-toggle="tooltip" data-placement="top" title="{{ user.last_login|date:'Y年m月j日 H:i' }}">
+                        <img src="{% static 'image/default1.jpg' %}" alt="..." class="img-rounded img-normal">
+                    </button>
+                </a>
+            </div>
+            <div class="profile">
+                <p class="profile">{{ user.username }}</p>
             </div>
         </div>
         <div class="clear"></div>
     {% endfor %}
 </div>
-
