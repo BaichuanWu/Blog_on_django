@@ -49,6 +49,7 @@ f及Scheme较为接近.为了取得技术优势，微软推出了JScript，CEnvi
 因此也称为ECMAScript。
 """
 
+<<<<<<< HEAD
 away_this = """
 Stray birds of summer come to my window to sing and fly away.
 And yellow leaves of autumn, which have no songs, flutter and fall
@@ -62,10 +63,30 @@ But Man has in him the silence of the sea, the noise of the earth and
 the music of the air.
 """
 
+=======
+    add_article(cat=python_cat,
+                title=u"python333",
+                summary=u"在实际工作中，对于小数据集的简单分析来说，\n"
+                        u"使用Excel绝对是最佳选择。但当我们需要更多复杂的统计分析和数据处理时"
+                )
+
+    add_article(cat=python_cat,
+                title=u"python332",
+                summary=u"在实际工作中，对于小11数据集的简单分析来说，\n"
+                        u"使用Excel绝对是最佳选择。但当我们需要更多复杂的统计分析和数据处理时"
+                )
+
+    add_article(cat=python_cat,
+                title=u"python99",
+                summary=u"在实际工作中，对于小22数据集的简单分析来说，\n"
+                        u"使用Excel绝对是最佳选择。但当我们需要更多复杂的统计分析和数据处理时"
+                )
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
 
 def populate(num):
     python_cat = add_type('Python')
 
+<<<<<<< HEAD
     add_article(cat=python_cat,
                 title=u"测试标题python-%s" % num,
                 summary=(u"测试简介python-%s" % num) * 5,
@@ -78,22 +99,64 @@ def populate(num):
                 title=u"测试标题javascript-%s" % num,
                 summary=(u"测试简介javascript-%s" % num) * 5,
                 content=js_this
+=======
+    add_article(cat=js_cat,
+                title=u"javascript2",
+                summary=u"在实际工作中，1对于小数据集的简单分析来说，\n"
+                        u"使用Excel绝对是最佳选择。但当我们需要更多复杂的统计分析和数据处理时"
+                )
+
+    add_article(cat=js_cat,
+                title=u"javascript5",
+                summary=u"在实际工作中，1对于小数据集的简单分析来说，\n"
+                        u"使用Excel绝对是最佳选择。但当我们需要更多复杂的统计分析和数据处理时"
+                )
+
+    add_article(cat=js_cat,
+                title=u"javascript7",
+                summary=u"在实际工作中，1对于小数据集的简单分析来说，\n"
+                        u"使用Excel绝对是最佳选择。但当我们需要更多复杂的统计分析和数据处理时"
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
                 )
 
     away_cat = add_type('Away')
 
     add_article(cat=away_cat,
+<<<<<<< HEAD
                 title=u"测试标题away-%s" % num,
                 summary=(u"测试简介away-%s" % num) * 5,
                 content=away_this
+=======
+                title=u"在家49",
+                summary=u"在实际工作中，1对于小数据集的简单分析来说，\n"
+                        u"使用Excel绝对是最佳选择。但当我们需要更多复杂的统计分析和数据处理时"
+                )
+
+    add_article(cat=away_cat,
+                title=u"在家30",
+                summary=u"在实际工作中，1对于小数据集的简单分析来说，\n"
+                        u"使用Excel绝对是最佳选择。但当我们需要更多复杂的统计分析和数据处理时"
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
                 )
 
     home_cat = add_type('Home')
 
     add_article(cat=home_cat,
+<<<<<<< HEAD
                 title=u"测试标题home-%s" % num,
                 summary=(u"测试简介home-%s" % num) * 5,
                 content=home_this
+=======
+                title=u"在外29",
+                summary=u"在实际工作中，1对于小数据集的简单分析来说，\n"
+                        u"使用Excel绝对是最佳选择。但当我们需要更多复杂的统计分析和数据处理时"
+                )
+
+    add_article(cat=home_cat,
+                title=u"在外19",
+                summary=u"在实际工作中，1对于小数据集的简单分析来说，\n"
+                        u"使用Excel绝对是最佳选择。但当我们需要更多复杂的统计分析和数据处理时"
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
                 )
 
     for c in ArticleType.objects.all():
@@ -101,7 +164,11 @@ def populate(num):
             print "- {0} - {1}".format(str(c), str(p))
 
 
+<<<<<<< HEAD
 def add_article(cat, title, summary, content, use_id=1):
+=======
+def add_article(cat, title, summary, content=u'等待补充', use_id=2):
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
     article = Article.objects.get_or_create(article_type=cat, title=title, summary=summary,
                                             content=content, author_id=use_id)[0]
     return article

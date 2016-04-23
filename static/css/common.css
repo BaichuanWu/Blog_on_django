@@ -53,6 +53,7 @@ ul,li{
     margin-top: 10px;
 }
 .img-normal{
+<<<<<<< HEAD
     margin-left: auto;
     height: 45px;
     width: 45px;
@@ -64,11 +65,19 @@ div.profile{
 }
 div.profile>p{
     font-size: smaller;
+=======
+    height: 50px;
+    display: inline-block;
+
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
 }
 .registered{
     width: 50px;
     height: 60px;
+<<<<<<< HEAD
     display: inline-block;
+=======
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
     float: left;
     margin: 8px;
 }
@@ -87,6 +96,7 @@ div.surround{
 }
 .nav>li>a.clear-pad{
     padding: 5px;
+<<<<<<< HEAD
 }
 button.none{
     border: none;
@@ -103,3 +113,6 @@ span.bottom{
     bottom: 10px;
     right: 3px;
 }
+=======
+}
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33

@@ -9,18 +9,40 @@
                 {% if articles %}
                     {% for article in articles %}
                         <span class="label label-info inline right-float">
+<<<<<<< HEAD
                             <a href="/blog/profile/{{ article.author.id }}" class="none white">
+=======
+                            <a href="/blog/profile/{{ article.author.id }}" class="none">
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
                                 {{ article.author.user.username }}
                             </a>
                         </span>
                         <h4><a href="/blog/article/{{ article.id }}/">{{ article.title }}</a></h4>
                         <p>{{ article.summary }}</p>
+<<<<<<< HEAD
                         {% include "blog/plug_in/_reply.html" %}
+=======
+{#                        <ul class="nav nav-pills" role="tablist">#}
+{#                            <li role="presentation"><a href="#">#}
+{#                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>#}
+{#                                <span class="badge">{{ article.favor_count }}</span></a></li>#}
+{#                            <li role="presentation"><a href="#">回复<span class="badge">{{ article.reply_count }}</span></a></li>#}
+{#                            <span class="inline right-float date-grey">{{ article.revised_date |date:'Y年m月j日 H:i'}}</span>#}
+{#                        </ul>#}
+{#                        <hr/>#}
+                        {% include "blog/_reply.html" %}
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
                     {% endfor %}
                 {% endif %}
             </div>
         </div>
+<<<<<<< HEAD
         {% load blog_extra %}
         {% new_reg %}
+=======
+        <div class="border-rad col-md-offset-1 col-md-3">
+            hahahah
+        </div>
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
     </div>
 {% endblock %}

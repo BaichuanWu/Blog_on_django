@@ -1,0 +1,22 @@
+<ul class="nav nav-pills" role="tablist">
+    <li role="presentation">
+        <a href="#" class="clear-pad" onclick="reply(this,{{ article.id }});return false;">
+            <h5 class="inline">评论</h5>
+            <span class="fav badge">{{ article.reply_count }}</span>
+        </a>
+    </li>
+    <span class="inline right-float date-grey">{{ article.revised_date |date:'Y年m月j日 H:i'}}</span>
+</ul>
+<div class="hide surround">
+    <lable>历史评论</lable><hr class="reply"/>
+    <div class="rep-node"></div>
+    <div class="add-node">
+        <textarea class="form-control" rows="2" name="content"></textarea>
+        {% if user.is_authenticated %}
+            <button type="button" class="btn btn-default btn-sm" onclick="addReply(this,{{ article.id }});return false">提交</button>
+        {% else %}
+            <a href="/blog/login/" class="none"><button type="button" class="btn btn-default btn-sm">提交</button></a>
+        {% endif %}
+    </div>
+</div>
+<hr/>

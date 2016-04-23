@@ -11,10 +11,16 @@ function reply(content, id) {
             success: function (calback) {
                 console.log(calback);
                 $.each(calback, function (k,v) {
+<<<<<<< HEAD
                     var temp = "<lable><h5 class='inline'>"+v.user__user__username+
                         ":</h5>&nbsp;&nbsp;&nbsp;</lable><span class='inline right-float date-grey'>"+
                         v.create_date+"</span>"+
                         v.content+"<hr class='reply'/>";
+=======
+                    var temp = "<lable><h5 class='inline'>"+v.user__user__username+":</h5>&nbsp;&nbsp;"+
+                        v.content+"</lable><span class='inline right-float date-grey'>"+
+                        v.create_date+"</span><hr class='reply'/>";
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
                     $(content).parent().parent().next().find('.rep-node').append(temp);
 
                 });
@@ -27,6 +33,7 @@ function reply(content, id) {
 
 function addReply(content, id) {
     var reply_content = $(content).prev().val();
+<<<<<<< HEAD
     if (!reply_content){
         console.log($(content).next());
         $(content).next().removeClass('hide');
@@ -108,3 +115,25 @@ function validateName(content) {
         document.getElementById('n-conf').innerHTML = '<p class="bg-warning bar">用户名格式不符</p>';
     }
 }
+=======
+    $.ajax({
+        url:'/blog/addreply/',
+        data:{nid:id, data:reply_content},
+        type:'POST',
+        success:function (calback) {
+            // console.log(calback);
+            var temp = "<lable><h5 class='inline'>"+calback.user+":</h5>&nbsp;&nbsp;"+
+                        calback.content+"</lable><span class='inline right-float date-grey'>"+
+                        calback.create_date+"</span><hr class='reply'/>";
+            $(content).parent().prev().append(temp);
+            $(content).prev().val('');
+            console.log(calback.count);
+            console.log($(content).parent().parent().prev().find('span.fav')[0].innerHTML);
+            $(content).parent().parent().prev().find('span.fav')[0].innerHTML=calback.count
+
+        }
+
+    })
+
+}
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33

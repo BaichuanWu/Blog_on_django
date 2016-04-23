@@ -21,8 +21,11 @@ error_messages = {
     },
     'password': {
         'required': u'必须填写密码',
+<<<<<<< HEAD
         'min_length': u'密码长度过短（6-12个字符）',
         'max_length': u'密码名长度过长（6-12个字符）',
+=======
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
     },
     'title': {
         'required': u'必须填写标题',
@@ -63,9 +66,13 @@ class ArticleForm(forms.ModelForm):
 
 class UserForm(forms.ModelForm):
     username = forms.CharField(max_length=12, min_length=3, error_messages=error_messages.get('username'))
+<<<<<<< HEAD
     email = forms.EmailField(error_messages=error_messages.get('email'))
     password = forms.CharField(widget=forms.PasswordInput(), max_length=12,
                                min_length=6, error_messages=error_messages.get('password'))
+=======
+    password = forms.CharField(widget=forms.PasswordInput())
+>>>>>>> 98adf8242f75a50d948056c25c0a6dc59ffc2b33
 
     class Meta:
         model = User
