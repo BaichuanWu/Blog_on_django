@@ -15,7 +15,9 @@ class PageHelper(object):
     @property
     def all_page(self):
         temp = divmod(self.items, self.per_page)
-        if temp[1] == 0:
+        if self.items == 0:
+            count = 1
+        elif temp[1] == 0:
             count = temp[0]
         else:
             count = temp[0] + 1
