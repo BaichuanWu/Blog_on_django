@@ -63,7 +63,7 @@ class PageHelper(object):
 
     @property
     def page_info(self):
-        return {'page_list': range(self.start_page, self.end_page + 1), 'end_page': self.end_page,
+        return {'page_list': range(self.start_page, self.end_page + 1), 'all_page': self.all_page,
                 'current_page': self.current_page, 'previous_page': self.previous, 'next_page': self.after}
 
 

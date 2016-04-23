@@ -14,7 +14,7 @@
         {% endif %}
     {% endfor %}
     <li class="disabled"><a href="#">...</a></li>
-    <li><a href="/blog/{{ in_url }}{{ end_page }}">尾页</a></li>
+    <li><a href="/blog/{{ in_url }}{{ all_page }}">尾页</a></li>
     <li {% if not next_page %}class="disabled" {% endif %}>
         <a href="/blog/{{ in_url }}{{ next_page }}" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
